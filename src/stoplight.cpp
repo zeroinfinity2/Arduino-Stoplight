@@ -18,7 +18,7 @@ void setup() {
 }
 
 void loop() {
-  buttonState = digitalRead(button);
+buttonState = digitalRead(button);
   
   if (buttonState != lastButtonState) {
     if (buttonState == LOW) {
@@ -29,8 +29,9 @@ void loop() {
       }
 
       digitalWrite(lightPins[count],HIGH);
-      
+      delay(500);
     }
     lastButtonState = buttonState;
   }
+
 }
